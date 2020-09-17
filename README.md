@@ -1,7 +1,7 @@
 # Hearthstone Pack Simulator
- This project was done as my exam in the subject Webdevelopment and API-design, and was completed in 48 hours. The task of the exam can be found in a [a PDF available in this repository](2020_pg6301_exam_april.pdf)
-
-Final grade was B, which represented the top 10% of all exam deliverances.
+ This project has been expanded from an exam I did in Web Development and API-Design. The original exam can be found on my Github page, under the name PG6301_340.
+ I've later added a few functionalities to make the app more whole, with a better UX and added images. There's a bunch of cleanup on the backend to make it run more clean
+ and keep everything neat. I've also stored data in JSON-files so that everything is persistent.
  
  ### Run Guide
  
@@ -14,32 +14,6 @@ To run the application you need to do the following
 
 When you load into the page you can register a new account, or if you ever wanted to know what it felt like to be super-rich
 in terms of virtual collectible cards, you can login with the usernam "richie_rich" and password "cashmoney".
-
-##Requirements Achieved
-All requirements, R1 thorugh R5 and T1 through T6, have been met.
-
-The final test coverage is 66.55%
-
-
-### Topic
-In this application I have chosen as my topic to make a simulator of card pack mechanics seen in the game Hearthstone,
-and my data for the cards you can open are gathered from an [open endpoint serving all the collectible cards in the game](
-https://hearthstonejson.com/). Because of the scope of the task and the limitations in the UI I designed, I've capped the
-cards at 100. The application follows similar mechanics to what's seen in the actual game, but altered to fit the
-specifications of the exam. In particular, when milling cards you get gold to buy packs rather than dust to buy new cards,
-and you get more gold the higher rarity of the card. I give out 5 cards per pack, which is how they work in the game
-as well.
-
-
-### Extra functionality
-Cards are all sorted by class.
-
-Cards all have rarities that will impact the mill price, allowing the user to maximize cardcount or gold by milling high
-value cards.
-
-User can elect to purchase cards rather than packs, the cost per card equals twice the amount you get for milling them.
-
-The game tracks count of your total cards, in case you want to try competing with your friends for the most amount of cards
 
 ### API
 The API is divided into three repositories, user, collection and packs, all with a range of endpoints covering GET, PUT,
@@ -59,9 +33,8 @@ request to a specific id, we do an authorization by checking that his session co
 
 In the exam task it was explicitly mentioned we should use 401 for authentication and 403 for authorization, so I have
 followed this convention. It's my understanding of the recent [RFC standards](https://tools.ietf.org/html/rfc7235#section-4.1)
-that this should be the other way around, as 401 is semantically called Unauthorized rather than Unauthenticated. When in
-doubt I'll always follow the words in the exam, and have so named 401 status codes Unauthorized instead, 
-but I wanted to clarify my thoughts on this in case it comes up.
+that this should be the other way around, as 401 is semantically called Unauthorized rather than Unauthenticated. Because of this
+this repository still follows the old standards from the exam, but I might change this in teh future.
 
 ### Frontend
 The frontend is built in React and uses React Router to enable it as a Single-Page Application. It matches all the parameters of the
@@ -90,3 +63,11 @@ technically call the endpoint at any time to recieve the airdrops, the UI is jus
 genereated a key on the server that would be sent through the the websockets message, which then could be used as a parameter 
 on the airdrop API to "unlock" a pack. Wouldn't be too hard of an implementation, but I wanted to focus on the explicit tasks in the
 exam.
+
+
+ ###Future implementations
+ - Add the ability to buy packs from different sets
+ 
+ - Animations and interactivity for pack opening
+ 
+ - Show modals of cards when clicking on 
