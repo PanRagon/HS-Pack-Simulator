@@ -1,0 +1,85 @@
+.main {
+    flex-direction: row;
+}
+
+.classes {
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.collection-container-left {
+    top: 275px;
+    position: absolute;
+    left: 2%;
+}
+
+.collection-container-right {
+    top: 275px;
+    position: absolute;
+    left: 55%;
+}
+
+.packs-containers {
+    display: flex;
+    padding-top: 100px;
+    justify-content: space-evenly;
+}
+
+.unowned {
+    filter: grayscale(100%);
+}
+
+.owned-card-text {
+
+}
+
+p {
+    width: fit-content;
+}
+.card-name {
+    width: 350px;
+    border: solid black;
+}
+
+.owned-card-holder {
+    width: 500px;
+    border: solid black;
+}
+
+.unowned-card-holder {
+    width: 500px;
+    border: solid black;
+}
+
+.header-text{
+    padding: 15px;
+}
+
+.mill-btn {
+    position: relative;
+    width: 150px;
+    text-align: center;
+    top: 0px;
+    right: 0px;
+}
+
+.selecters {
+    margin-right: 25px;
+}
+
+.header-user-info-container {
+    display: flex;
+    padding-right: 15px;
+    justify-content: flex-end;
+    justify-self: flex-end;
+}
+.header-user-info {
+    position: relative;
+    padding-right: 15px;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
